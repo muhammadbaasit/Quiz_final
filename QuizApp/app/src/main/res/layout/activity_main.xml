@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.quizapp.QviewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/labelQuestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="160dp"
+            android:text="Question"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/labelQuestionCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:text=""
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/labelQuestion"
+            app:layout_constraintStart_toEndOf="@+id/labelQuestion"
+            app:layout_constraintTop_toTopOf="@+id/labelQuestion"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/tvQuestion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="24dp"
+            android:text=""
+            style="@style/custumStyle"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="@+id/labelQuestion"
+            app:layout_constraintTop_toBottomOf="@+id/labelQuestion" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.9" />
+
+        <TextView
+            android:id="@+id/labelopt1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="a)"
+            app:layout_constraintStart_toStartOf="@+id/labelQuestion"
+            app:layout_constraintTop_toBottomOf="@+id/tvQuestion" />
+
+        <TextView
+            android:id="@+id/tvOpt1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:text=""
+            app:layout_constraintBottom_toBottomOf="@+id/labelopt1"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toEndOf="@+id/labelopt1"
+            app:layout_constraintTop_toTopOf="@+id/labelopt1" />
+
+        <TextView
+            android:id="@+id/labelOpt2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="b)"
+            app:layout_constraintStart_toStartOf="@+id/labelopt1"
+            app:layout_constraintTop_toBottomOf="@+id/labelopt1" />
+
+        <TextView
+            android:id="@+id/tvOpt2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:text=""
+            app:layout_constraintBottom_toBottomOf="@+id/labelOpt2"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toEndOf="@+id/labelOpt2"
+            app:layout_constraintTop_toTopOf="@+id/labelOpt2" />
+
+        <TextView
+            android:id="@+id/labelOpt3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="c)"
+            app:layout_constraintStart_toStartOf="@+id/labelOpt2"
+            app:layout_constraintTop_toBottomOf="@+id/labelOpt2" />
+
+        <TextView
+            android:id="@+id/tvOpt3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:text=""
+            app:layout_constraintBottom_toBottomOf="@+id/labelOpt3"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toEndOf="@+id/labelOpt3"
+            app:layout_constraintTop_toTopOf="@+id/labelOpt3" />
+
+        <TextView
+            android:id="@+id/labelOpt4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="d)"
+            app:layout_constraintStart_toStartOf="@+id/labelOpt3"
+            app:layout_constraintTop_toBottomOf="@+id/labelOpt3" />
+
+        <TextView
+            android:id="@+id/tvOpt4"
+            android:layout_width="309dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:text=""
+            app:layout_constraintBottom_toBottomOf="@+id/labelOpt4"
+            app:layout_constraintStart_toEndOf="@+id/labelOpt4"
+            app:layout_constraintTop_toTopOf="@+id/labelOpt4" />
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:visibility="gone"
+            android:layout_marginTop="32dp"
+            android:onClick="@{viewModel::onPrevClick}"
+            android:text="PREV"
+            app:layout_constraintStart_toEndOf="@+id/labelOpt4"
+            app:layout_constraintTop_toBottomOf="@+id/tvOpt4" />
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp"
+            android:onClick="@{viewModel::onNextClick}"
+            android:text="NEXT"
+            app:layout_constraintEnd_toEndOf="@+id/tvOpt4"
+            app:layout_constraintTop_toBottomOf="@+id/tvOpt4" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
